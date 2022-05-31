@@ -1,30 +1,44 @@
 package com.javaex.vo;
 
-public class GuestbookVo {
+public class GuestBookVo {
 	
+	// 필드
 	private int no;
 	private String name;
 	private String password;
 	private String content;
 	private String regDate;
-
-	public GuestbookVo() {
+	
+	// 생성자
+	public GuestBookVo() {
+		
 	}
-
-	public GuestbookVo(int no, String name, String password, String content, String regDate) {
+	
+	public GuestBookVo(String name, String password, String content) {
+		this.name = name;
+		this.password = password;
+		this.content = content;
+	}
+	
+	public GuestBookVo(int no, String name, String regDate, String content) {
+		this.no = no;
+		this.name = name;
+		this.regDate = regDate;
+		this.content = content;
+		
+	}
+	
+	public GuestBookVo(int no, String name, String password, String content, String regDate) {
 		this.no = no;
 		this.name = name;
 		this.password = password;
 		this.content = content;
 		this.regDate = regDate;
 	}
-
-	public GuestbookVo(String name, String password, String content) {
-		this.name = name;
-		this.password = password;
-		this.content = content;
-	}
-
+	
+	
+	// 메소드 gs
+	
 	public int getNo() {
 		return no;
 	}
@@ -64,10 +78,14 @@ public class GuestbookVo {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
-
+	
+	// 메소드 일반
+	
 	@Override
 	public String toString() {
-		return "GuestbookVo [no=" + no + ", name=" + name + ", password=" + password + ", content=" + content
+		return "GuestBookVo [no=" + no + ", name=" + name + ", password=" + password + ", content=" + content
 				+ ", regDate=" + regDate + "]";
 	}
+
+
 }
