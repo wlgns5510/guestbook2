@@ -6,7 +6,7 @@
 
 <%
 	GuestBookDao guestBookDao = new GuestBookDao();
-	List<GuestBookVo> guestList = guestBookDao.guestBookList();
+	List<GuestBookVo> guestList = guestBookDao.guestSelect();
 %>
 
 <!DOCTYPE html>
