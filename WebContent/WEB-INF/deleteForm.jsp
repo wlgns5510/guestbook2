@@ -17,7 +17,7 @@
 				<td><a href="/guestbook2/gbc">메인으로 돌아가기</a></td>
 			</tr>
 		</table>
-		<input type='text' name="no" value="<%=request.getParameter("no")%>"><br>
+		<input type='text' name="no" value="${param.no}"><br>
 	</form>
 </body>
 </html>
